@@ -1,5 +1,5 @@
 // ==========================
-// Weather harsh Forecast
+// Weather harsh forcast
 // ==========================
 
 const API_KEY = "50378b53c6fea2e1e67584d4bd6d9234";
@@ -78,7 +78,7 @@ async function getWeatherByCity(city){
 
         updateCurrentWeather(data);
 
-        getForecast(city);
+        getforcast(city);
 
         getAQI(data.coord.lat, data.coord.lon);
 
@@ -175,23 +175,23 @@ function updateCurrentWeather(data){
 }
 
 // ==========================
-// 7 Day Forecast
+// 7 Day forcast
 // ==========================
 
-async function getForecast(city){
+async function getforcast(city){
 
-    // One Call API or Forecast API
-    // Add your preferred forecast endpoint here
+    // One Call API or forcast API
+    // Add your preferred forcast endpoint here
 
-    const forecastContainer =
-        document.getElementById("forecastContainer");
+    const forcastContainer =
+        document.getElementById("forcastContainer");
 
-    forecastContainer.innerHTML = "";
+    forcastContainer.innerHTML = "";
 
     for(let i = 1; i <= 7; i++){
 
-        forecastContainer.innerHTML += `
-            <div class="forecast-card">
+        forcastContainer.innerHTML += `
+            <div class="forcast-card">
                 <h4>Day ${i}</h4>
                 <p>25°C</p>
                 <p>Cloudy</p>
