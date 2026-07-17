@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Harsh Forecast</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <!-- Leaflet Map -->
+    <link rel="stylesheet"
+    href="https://unpkg.com/leaflet/dist/leaflet.css" />
+</head>
+
+<body>
+
+    <!-- Animated Background -->
+    <div class="background-animation"></div>
+
+    <!-- Loading Screen -->
+    <div id="loader">
+        <div class="spinner"></div>
+        <h2>Loading Weather harsh Forecast...</h2>
+    </div>
+
+    <!-- Main Container -->
+    <div class="container">
+
+        <!-- Header -->
+        <header>
+            <h1>
+                <i class="fa-solid fa-cloud-sun"></i>
+                Weather harsh Forecast
+            </h1>
+
+            <button id="darkModeBtn">
+                🌙 Dark Mode
+            </button>
+        </header>
+
+        <!-- Search Section -->
+        <section class="search-section">
+
+            <input
+                type="text"
+                id="cityInput"
+                placeholder="Enter city name">
+
+            <button id="searchBtn">
+                Search
+            </button>
+
+            <button id="locationBtn">
+                📍 Current Location
+            </button>
+
+        </section>
+
+        <!-- Current Weather -->
+        <section class="current-weather">
+
+            <div class="weather-main">
+
+                <h2 id="cityName">
+                    City Name
+                </h2>
+
+                <img
+                    id="weatherIcon"
+                    src=""
+                    alt="Weather Icon">
+
+                <h1 id="temperature">
+                    --°C
+                </h1>
+
+                <h3 id="weatherDescription">
+                    Weather Description
+                </h3>
+
+            </div>
+
+            <!-- Weather Details -->
+            <div class="weather-details">
+
+                <div class="card">
+                    <h4>Humidity</h4>
+                    <p id="humidity">--%</p>
+                </div>
+
+                <div class="card">
+                    <h4>Wind Speed</h4>
+                    <p id="windSpeed">-- km/h</p>
+                </div>
+
+                <div class="card">
+                    <h4>Pressure</h4>
+                    <p id="pressure">-- hPa</p>
+                </div>
+
+                <div class="card">
+                    <h4>Feels Like</h4>
+                    <p id="feelsLike">--°C</p>
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- Sunrise Sunset -->
+        <section class="sun-section">
+
+            <div class="card">
+                <h3>🌅 Sunrise</h3>
+                <p id="sunrise">--:--</p>
+            </div>
+
+            <div class="card">
+                <h3>🌇 Sunset</h3>
+                <p id="sunset">--:--</p>
+            </div>
+
+        </section>
+
+        <!-- Air Quality -->
+        <section class="aqi-section">
+
+            <h2>Air Quality Index</h2>
+
+            <div class="aqi-card">
+                <h1 id="aqiValue">--</h1>
+                <p id="aqiStatus">
+                    Loading...
+                </p>
+            </div>
+
+        </section>
+
+        <!-- 7 Day Forecast -->
+        <section class="forecast-section">
+
+            <h2>7 Day Forecast</h2>
+
+            <div id="forecastContainer">
+
+                <!-- JS will create forecast cards -->
+
+            </div>
+
+        </section>
+
+        <!-- Weather Map -->
+        <section class="map-section">
+
+            <h2>Weather Map</h2>
+
+            <div id="map"></div>
+
+        </section>
+
+        <!-- Footer -->
+        <footer>
+
+            <p>
+                © 2026 Weather harsh Forecast
+            </p>
+
+        </footer>
+
+    </div>
+
+    <!-- Leaflet JS -->
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+
+    <!-- Main JS -->
+    <script src="script.js"></script>
+
+</body>
+</html>
