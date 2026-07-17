@@ -155,7 +155,7 @@ header h1{
 .card,
 .weather-main,
 .aqi-card,
-.forecast-card{
+.forcast-card{
 
     background:rgba(255,255,255,0.15);
 
@@ -217,13 +217,13 @@ header h1{
     font-size:4rem;
 }
 
-/* Forecast */
+/* forcast */
 
-.forecast-section{
+.forcast-section{
     margin-top:40px;
 }
 
-#forecastContainer{
+#forcastContainer{
     display:grid;
     grid-template-columns:
     repeat(auto-fit,minmax(150px,1fr));
@@ -232,12 +232,12 @@ header h1{
     margin-top:20px;
 }
 
-.forecast-card{
+.forcast-card{
     text-align:center;
     transition:0.3s;
 }
 
-.forecast-card:hover{
+.forcast-card:hover{
     transform:translateY(-5px);
 }
 
@@ -282,7 +282,7 @@ footer{
 
 .dark-mode .card,
 .dark-mode .weather-main,
-.dark-mode .forecast-card,
+.dark-mode .forcast-card,
 .dark-mode .aqi-card{
 
     background:
